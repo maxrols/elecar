@@ -44,7 +44,7 @@ img {
 }
 
 .section {
-    padding: 72px 0 32px;
+    padding: 4.5rem 0 2rem;
 }
 
 .section__title {
@@ -55,4 +55,17 @@ img {
 
 .main {
     overflow: hidden;
+}
+
+.shape {
+    background-color: hsla(219, 33%, 32%, .5);
+    filter: blur(112px);
+    &__big {
+        width: 400px;
+        height: 400px;
+    }
+    &__small {
+        width: 300px;
+        height: 300px;
+    }
 }

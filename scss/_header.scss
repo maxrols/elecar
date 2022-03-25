@@ -5,6 +5,12 @@
     left: 0;
     top: 0;
     z-index: 99;
+    transition: .3s;
+    &.scroll-header {
+        background: $body-color;
+        border-radius: 0 0 1rem 1rem;
+        box-shadow: 0 2px 4px hsla(0, 0%, 1%, 1)
+    }
 }
 
 .nav {
