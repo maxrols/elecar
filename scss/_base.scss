@@ -68,4 +68,9 @@ img {
         width: 300px;
         height: 300px;
     }
+    &__smaller {
+        width: 180px;
+        height: 180px;
+        filter: blur(64px);
+    }
 }

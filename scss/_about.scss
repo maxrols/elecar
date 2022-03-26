@@ -1,0 +1,55 @@
+.about {
+    &__container {
+        row-gap: 6rem;
+    }
+
+    &__group {
+        position: relative;
+    }
+
+    &__img {
+        width: 310px;
+        border-radius: .5rem;
+    }
+
+    &__card {
+        width: 180px;
+        position: absolute;
+        right: 0;
+        bottom: -2.5rem;
+        background-color: hsla(0, 0%, 100%, 0.1);
+        backdrop-filter: blur(16px);
+        padding: 1rem .75rem;
+        border-radius: 1.25rem;
+        text-align: center;
+        &-title {
+            font-size: $h3-font-size;
+            margin-bottom: .5rem;
+        }
+        &-descr {
+            font-size: $smaller-font-size;
+        }
+    }
+
+    &__title {
+        text-align: initial;
+        margin-bottom: 2rem;
+    }
+
+    &__descr {
+        margin-bottom: 2rem;
+    }
+}
+
+.button {
+    display: inline-block;
+    background-color: $first-color;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: .25rem;
+    font-size: $normal-font-size;
+    transition: .3s;
+    &:hover {
+        background-color: $first-color-alt;
+    }
+}

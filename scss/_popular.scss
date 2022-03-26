@@ -1,0 +1,89 @@
+.popular {
+    &__container {
+        padding-top: 1rem;  
+    }
+
+    &__card {
+        position: relative;
+        width: 238px;
+        background-color: $container-color;
+        padding: 2.5rem 1.5rem 1.5rem;
+        margin-bottom: 3rem;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        &:hover .popular__img {
+            transform: translateY(-.25rem);
+        }
+
+        .shape__smaller {
+            position: absolute;
+            top: -2.5rem;
+            left: -2.5rem;
+        }
+    }
+    &__title, &__subtitle, &__img {
+        position: relative;
+    }
+
+    &__title {
+        font-size: $h2-font-size;
+        margin-bottom: 0.25rem;
+    }
+
+    &__subtitle {
+        color: $text-color;
+        font-weight: 400;
+        font-size: $normal-font-size;
+    }
+
+    &__img {
+        width: 160px;
+        margin: .75rem 0 1.25rem 1.5rem;
+        transition: .3s;
+    }
+
+    &__data {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: .5rem 1.25rem;
+        margin-bottom: 2rem;
+        &-group {
+            display: inline-flex;
+            align-items: center;
+            column-gap: .5rem;
+            color: #fff;
+            font-size: $smaller-font-size;
+        }
+
+        & i {
+            font-size: 1rem;
+        }
+    }
+
+    &__price {
+        font-size: $h3-font-size;
+    }
+
+    &__button {
+        border: none;
+        outline: none;
+        padding: .75rem 1rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 1rem 0 1rem 0;
+        cursor: pointer;
+
+        & i {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+    background-color: $text-color;
+    &-active {
+        background-color: $first-color;
+    }
+}
