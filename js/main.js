@@ -3,6 +3,7 @@ const navMenu = document.querySelector('.nav__menu');
 const closeBtn = document.querySelector('.nav__close');
 const navLinks = document.querySelectorAll('.nav__link');
 const header = document.querySelector('.header');
+const linkFeatued = document.querySelectorAll('.featured__item');
 
 showBtn.addEventListener('click', () => {
     navMenu.classList.add('show');
@@ -47,3 +48,23 @@ let swiperPopular = new Swiper('.popular__container', {
         }
     }
 });
+
+let mixerFeatured = mixitup('.featured__content', {
+    selectors: {
+        target: '.featured__card'
+    },
+    animation: {
+        duration: 300
+    }
+});
+
+function activeFeatured() {
+    linkFeatued.forEach(li => {
+        li.classList.remove("active-featured");
+    });
+    this.classList.add('active-featured');
+}
+
+linkFeatued.forEach(link => {
+    link.addEventListener('click', activeFeatured);
+})

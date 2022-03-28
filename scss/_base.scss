@@ -74,3 +74,17 @@ img {
         filter: blur(64px);
     }
 }
+
+.button {
+    display: inline-block;
+    background-color: $first-color;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: .25rem;
+    font-size: $normal-font-size;
+    transition: .3s;
+    max-width: max-content;
+    &:hover {
+        background-color: $first-color-alt;
+    }
+}

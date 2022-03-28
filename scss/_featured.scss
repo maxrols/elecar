@@ -1,0 +1,120 @@
+.featured {
+    &__container {
+        padding-top: 1rem;
+    }
+
+    &__filter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1rem;
+        margin-bottom: 3.5rem;
+    }
+
+    &__item {
+        width: 48px;
+        height: 48px;
+        border: none;
+        outline: none;
+        padding: 0.75rem;
+        border-radius: .75rem;
+        background-color: $container-color;
+        font-size: $normal-font-size;
+        color: #fff;
+        transition: .3s;
+        cursor: pointer;
+
+        & img {
+            width: 1.5rem;
+        }
+
+        & img,
+        & span {
+            opacity: .3;
+            transition: .3s;
+        }
+
+        &:hover {
+            background-color: $first-color;
+        }
+
+        &:hover img,
+        &:hover span {
+            opacity: 1;
+        }
+
+        &.active-featured {
+            background-color: $first-color;
+            & img,
+            & span {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__content {
+        grid-template-columns: 228px;
+        row-gap: 2.5rem;
+        justify-content: center;
+    }
+
+    &__card {
+        position: relative;
+        background-color: $container-color;
+        padding: 2rem 1.5rem 1.5rem;
+        border-radius: 1.5rem;
+        overflow: hidden;
+
+        .shape__smaller {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+        }
+
+        &:hover .featured__img {
+            transform: translateY(-.25rem);
+        }
+
+    }
+    &__title,
+    &__subtitle,
+    &__img {
+        position: relative;
+    }
+    
+    &__title {
+        font-size: $h2-font-size;
+        margin-bottom: 0.25rem;
+    }
+
+    &__subtitle {
+        font-size: $normal-font-size;
+        color: $text-color;
+        font-weight: 400;
+    }
+
+    &__img {
+        width: 180px;
+        margin: 1.5rem 0;
+        transition: .3s;
+    }
+
+    &__price {
+        font-size: $h3-font-size;
+    }
+
+    &__button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: .75rem 1rem;
+        border-radius: 1rem 0 1rem 0;
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+        & i {
+            font-size: 1.25rem;
+        }
+    }
+}
