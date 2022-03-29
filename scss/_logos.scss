@@ -1,0 +1,17 @@
+.logos {
+    &__container {
+        grid-template-columns: repeat(3, max-content);
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        padding-bottom: 2rem;
+    }
+    &__img {
+        width: 40px;
+        opacity: .4;
+        transition: .3s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

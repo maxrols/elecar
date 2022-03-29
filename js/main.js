@@ -4,6 +4,7 @@ const closeBtn = document.querySelector('.nav__close');
 const navLinks = document.querySelectorAll('.nav__link');
 const header = document.querySelector('.header');
 const linkFeatued = document.querySelectorAll('.featured__item');
+const scrollup = document.querySelector('.scrollup');
 
 showBtn.addEventListener('click', () => {
     navMenu.classList.add('show');
@@ -67,4 +68,15 @@ function activeFeatured() {
 
 linkFeatued.forEach(link => {
     link.addEventListener('click', activeFeatured);
-})
+});
+
+
+function scrollUp() {
+    if (this.scrollY >= 350) {
+        scrollup.classList.add('show-scroll');
+    } else {
+        scrollup.classList.remove('show-scroll');
+    }
+}
+
+window.addEventListener('scroll', scrollUp);
