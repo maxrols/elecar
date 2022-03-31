@@ -80,3 +80,23 @@ function scrollUp() {
 }
 
 window.addEventListener('scroll', scrollUp);
+
+
+
+const sections = document.querySelectorAll('section[id]');
+
+function getActiveLink() {
+    const scrollY = window.scrollY;
+    sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop;
+        const sectionId = section.getAttribute('id');
+        if (scrollY >= sectionTop && scrollY < sectionTop+sectionHeight) {
+            document.querySelector('.nav__link[href="#' + sectionId + '"]').classList.add('active-link');
+        } else {
+            document.querySelector('.nav__link[href="#' + sectionId + '"]').classList.remove('active-link');
+        }
+    });
+}
+
+window.addEventListener('scroll', getActiveLink);

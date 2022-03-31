@@ -60,6 +60,9 @@
         &:hover {
             color: $first-color;
         }
+        &.active-link {
+            color: $first-color;
+        }
     }
 
     &__close {
